@@ -3220,6 +3220,8 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btn_delete_all
+id btn_delete_selections
 id buttonPanel
 id cache_measures
 id callMeasure

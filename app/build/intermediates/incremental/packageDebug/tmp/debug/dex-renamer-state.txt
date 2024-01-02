@@ -1,4 +1,4 @@
-#Tue Jan 02 21:24:43 NOVT 2024
+#Tue Jan 02 23:15:30 NOVT 2024
 base.0=C\:\\Users\\Kien vip\\AndroidStudioProjects\\Capesalon-manager-kien-huy\\CapelliSalon_for_managerOnly\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\Kien vip\\AndroidStudioProjects\\Capesalon-manager-kien-huy\\CapelliSalon_for_managerOnly\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\Kien vip\\AndroidStudioProjects\\Capesalon-manager-kien-huy\\CapelliSalon_for_managerOnly\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex

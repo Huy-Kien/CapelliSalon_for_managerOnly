@@ -33,8 +33,10 @@ public class detail_information_booking extends AppCompatActivity {
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dtbookingList);
         dtbooking.setAdapter(adapter);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String userId = getIntent().getStringExtra("userId");
 
-        DatabaseReference userBookingRef = FirebaseDatabase.getInstance().getReference().child("userID").child("5cQ62L3VHsgaiMTadSoRufikfhD3").child("Personal Information");
+        DatabaseReference userBookingRef = FirebaseDatabase.getInstance().getReference().child("userID").child(userId).child("InfoBooking");
+
         userBookingRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
