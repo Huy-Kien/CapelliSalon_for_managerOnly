@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/home_img1"
+        android:scaleType="centerCrop" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLIENT HAVE MADE BOOKINGS"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp">
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click to view details"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp">
+    </TextView>
+
+    <ListView
+        android:id="@+id/lv_booking"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+    </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <!-- Nút 1 -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete selections"
+            android:layout_margin="10dp" />
+
+        <!-- Nút 2 -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete all"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+</LinearLayout>

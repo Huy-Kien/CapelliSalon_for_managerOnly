@@ -2,9 +2,24 @@ R_DEF: Internal format may change without notice
 local
 color black
 color white
+drawable home_img1
+drawable home_img2
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id checkBox
+id home_btn_booking
+id home_btn_shopping
+id lv_booking
+id lv_detail_booking
+id lv_shopping
+id textView
 layout activity_main
+layout booking
+layout detail_infomation_booking
+layout home
+layout list_item
+layout shopping
+layout simple_list_item_1
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
