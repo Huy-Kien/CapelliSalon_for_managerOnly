@@ -53,6 +53,10 @@
             android:exported="false" >
         </activity>
         <activity
+            android:name="com.example.capellisalon_app_manager.detail_information_shopping"
+            android:exported="false" >
+        </activity>
+        <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"
             android:exported="true"

@@ -42,16 +42,18 @@
 
         <!-- Nút 1 -->
         <Button
+            android:id="@+id/btn_shopping_del_sel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete selections"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:text="Delete selections" />
 
         <!-- Nút 2 -->
         <Button
+            android:id="@+id/btn_shopping_delALL"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete all"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:text="Delete all" />
     </LinearLayout>
 </LinearLayout>

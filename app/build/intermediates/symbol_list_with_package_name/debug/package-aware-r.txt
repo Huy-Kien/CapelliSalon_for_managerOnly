@@ -3220,6 +3220,8 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btn_shopping_delALL
+id btn_shopping_del_sel
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3368,6 +3370,7 @@ id listMode
 id list_item
 id lv_booking
 id lv_detail_booking
+id lv_detail_shopping
 id lv_shopping
 id m3_side_sheet
 id marquee
@@ -3763,6 +3766,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout detail_infomation_booking
+layout detail_information_shopping
 layout home
 layout list_item
 layout m3_alert_dialog
