@@ -6,6 +6,8 @@ drawable home_img1
 drawable home_img2
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id btn_delete_all
+id btn_delete_selections
 id btn_shopping_delALL
 id btn_shopping_del_sel
 id checkBox

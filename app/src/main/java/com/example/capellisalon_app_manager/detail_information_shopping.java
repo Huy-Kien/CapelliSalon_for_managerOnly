@@ -33,10 +33,10 @@ public class detail_information_shopping extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.shopping);
+        setContentView(R.layout.detail_information_shopping);
 
         Intent intent = getIntent();
-        listView = findViewById(R.id.lv_shopping);
+        listView = findViewById(R.id.lv_detail_shopping);
         arrayList = new ArrayList<String>();
         hashMap = new HashMap<>();
 

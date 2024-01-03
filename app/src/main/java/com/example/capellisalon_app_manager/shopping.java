@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -38,6 +39,8 @@ public class shopping extends AppCompatActivity {
     Intent intent = new Intent();
     private ArrayList<HashMap<String, String>> productList;
     private HashMap<String,String> product_info;
+
+    private DataSnapshot dataSnapshot_for_button_del;
     String value_onItem, id_product_on_item, mail_onitem;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,12 +69,11 @@ public class shopping extends AppCompatActivity {
                 String selectedItem = (String) parent.getItemAtPosition(position);
                 intent = new Intent(shopping.this, detail_information_shopping.class);
                 for(HashMap<String,String> hashmap : productList) {
-
                     if ( hashmap.get("email") != null && hashmap.get("id")!= null) {
                         mail_onitem = hashmap.get("email").toString();
                         id_product_on_item = hashmap.get("id").toString();
                          value_onItem = "Email: " + mail_onitem + " || Product ID: " + id_product_on_item;
-                        Toast.makeText(shopping.this, "OK Hashmap not null.", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(shopping.this, "OK Hashmap not null.", Toast.LENGTH_SHORT).show();
                     }
                     if (value_onItem.equals(selectedItem)) {
                             intent.putExtra("product_info", hashmap);
@@ -88,6 +90,7 @@ public class shopping extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
                     Log.d("Firebase", "DataSnapshot exists: " + dataSnapshot.getValue().toString());
+                    dataSnapshot_for_button_del = dataSnapshot;
                     for(DataSnapshot snapshot_user_level : dataSnapshot.getChildren()) {
                         for(DataSnapshot snapshot_productID_level : snapshot_user_level.getChildren()) {
 
@@ -114,6 +117,57 @@ public class shopping extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Log.e("Firebase", "onCancelled called: " + databaseError.getMessage());
+            }
+        });
+        btn_del_sel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Lặp qua tất cả các view trong ListView
+                for (int i = 0; i < listView.getChildCount(); i++) {
+                    // Lấy view hiện tại
+                    View view = listView.getChildAt(i);
+                    // Tìm checkbox trong view
+                    CheckBox checkBox = view.findViewById(R.id.checkBox);
+                    // Kiểm tra nếu checkbox được chọn
+                    if (checkBox.isChecked()) {
+                        //Xoá trên firebase
+                        arrayList.get(i).toString();
+                        TextView textView = view.findViewById(R.id.textView); // R.id.textView là id của TextView trong layout của hàng ListView
+                        // Lấy giá trị của TextView
+                        String text = textView.getText().toString();
+                        for(DataSnapshot snapshot_user_level : dataSnapshot_for_button_del.getChildren()) {
+                            for (DataSnapshot snapshot_productID_level : snapshot_user_level.getChildren()) {
+                                String clientmail = snapshot_productID_level.child("email").getValue(String.class);
+                                String productID = snapshot_productID_level.child("id").getValue(String.class);
+                                String value = "Email: " + clientmail + " || Product ID: " + productID;
+
+                                if(text.equals(value)){
+                                    FirebaseDatabase.getInstance().getReference().child("Orders").child(snapshot_user_level.getKey())
+                                            .child(productID).removeValue();
+                                }
+
+                            }
+                        }
+                        // Xóa item tương ứng từ danh sách
+                        arrayList.remove(i);
+                        // Cập nhật adapter
+                        arrayAdapter.notifyDataSetChanged();
+                        Toast.makeText(shopping.this, "Selected order was deleted successfully.", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+        });
+
+        btn_del_all.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Xóa tất cả các mục từ danh sách
+                FirebaseDatabase.getInstance().getReference().child("Orders");
+                arrayList.clear();
+                // Cập nhật adapter
+                arrayAdapter.notifyDataSetChanged();
+                Toast.makeText(shopping.this, "Delete all orders successfully.", Toast.LENGTH_SHORT).show();
             }
         });
     }
