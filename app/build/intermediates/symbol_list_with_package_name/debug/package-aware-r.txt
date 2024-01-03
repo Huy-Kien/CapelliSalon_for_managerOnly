@@ -3220,10 +3220,10 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btn_del_all_shopping
+id btn_del_sel_shopping
 id btn_delete_all
 id btn_delete_selections
-id btn_shopping_delALL
-id btn_shopping_del_sel
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3349,6 +3349,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id image_view_id
 id immediateStop
 id included
 id indeterminate
@@ -3586,6 +3587,7 @@ id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
+id text_view_1_id
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -3878,6 +3880,8 @@ string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
+string click_to_view_details
+string client_have_made_shoppings
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -3897,6 +3901,8 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string copy_toast_msg
+string delete_all
+string delete_selections
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description

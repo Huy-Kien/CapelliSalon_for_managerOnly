@@ -1,5 +1,7 @@
 package com.example.capellisalon_app_manager;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -48,8 +50,8 @@ public class shopping extends AppCompatActivity {
         setContentView(R.layout.shopping);
         GenericTypeIndicator<HashMap<String,String>> genericTypeIndicator = new GenericTypeIndicator<HashMap<String,String>>() {};
         listView = findViewById(R.id.lv_shopping);
-        btn_del_sel = findViewById(R.id.btn_shopping_del_sel);
-        btn_del_all = findViewById(R.id.btn_shopping_delALL);
+        btn_del_sel = findViewById(R.id.btn_del_sel_shopping);
+        btn_del_all = findViewById(R.id.btn_del_all_shopping);
         arrayList = new ArrayList<String>();
         productList = new ArrayList<HashMap<String, String>>();
         arrayAdapter = new ArrayAdapter<String>(this, R.layout.list_item, R.id.textView, arrayList) {
@@ -122,39 +124,54 @@ public class shopping extends AppCompatActivity {
         btn_del_sel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Lặp qua tất cả các view trong ListView
                 for (int i = 0; i < listView.getChildCount(); i++) {
                     // Lấy view hiện tại
+
                     View view = listView.getChildAt(i);
                     // Tìm checkbox trong view
                     CheckBox checkBox = view.findViewById(R.id.checkBox);
+
                     // Kiểm tra nếu checkbox được chọn
                     if (checkBox.isChecked()) {
+                        int finalI = i;
                         //Xoá trên firebase
                         arrayList.get(i).toString();
                         TextView textView = view.findViewById(R.id.textView); // R.id.textView là id của TextView trong layout của hàng ListView
                         // Lấy giá trị của TextView
                         String text = textView.getText().toString();
-                        for(DataSnapshot snapshot_user_level : dataSnapshot_for_button_del.getChildren()) {
-                            for (DataSnapshot snapshot_productID_level : snapshot_user_level.getChildren()) {
-                                String clientmail = snapshot_productID_level.child("email").getValue(String.class);
-                                String productID = snapshot_productID_level.child("id").getValue(String.class);
-                                String value = "Email: " + clientmail + " || Product ID: " + productID;
+                        // Lặp qua tất cả các view trong ListView
 
-                                if(text.equals(value)){
-                                    FirebaseDatabase.getInstance().getReference().child("Orders").child(snapshot_user_level.getKey())
-                                            .child(productID).removeValue();
-                                }
+                        new AlertDialog.Builder(shopping.this)
+                                .setMessage("Are you sure you want to delete this order?")
+                                .setCancelable(false)
+                                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        for(DataSnapshot snapshot_user_level : dataSnapshot_for_button_del.getChildren()) {
+                                            for (DataSnapshot snapshot_productID_level : snapshot_user_level.getChildren()) {
+                                                String clientmail = snapshot_productID_level.child("email").getValue(String.class);
+                                                String productID = snapshot_productID_level.child("id").getValue(String.class);
+                                                String value = "Email: " + clientmail + " || Product ID: " + productID;
 
-                            }
-                        }
-                        // Xóa item tương ứng từ danh sách
-                        arrayList.remove(i);
-                        // Cập nhật adapter
-                        arrayAdapter.notifyDataSetChanged();
-                        Toast.makeText(shopping.this, "Selected order was deleted successfully.", Toast.LENGTH_SHORT).show();
+                                                if(text.equals(value)){
+                                                    FirebaseDatabase.getInstance().getReference().child("Orders").child(snapshot_user_level.getKey())
+                                                            .child(productID).removeValue();
+                                                }
+
+                                            }
+                                        }
+                                        // Xóa item tương ứng từ danh sách
+                                        arrayList.remove(finalI);
+                                        // Cập nhật adapter
+                                        arrayAdapter.notifyDataSetChanged();
+                                        Toast.makeText(shopping.this, "Selected order was deleted successfully.", Toast.LENGTH_SHORT).show();
+                                    }
+                                })
+                                .setNegativeButton("No", null)
+                                .show();
                     }
                 }
+
             }
 
         });
@@ -162,13 +179,28 @@ public class shopping extends AppCompatActivity {
         btn_del_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Xóa tất cả các mục từ danh sách
-                FirebaseDatabase.getInstance().getReference().child("Orders");
-                arrayList.clear();
-                // Cập nhật adapter
-                arrayAdapter.notifyDataSetChanged();
-                Toast.makeText(shopping.this, "Delete all orders successfully.", Toast.LENGTH_SHORT).show();
+                new AlertDialog.Builder(shopping.this)
+                        .setMessage("Are you sure you want to delete ALL ORDERS?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                setBtn_del_all();
+                            }
+                        })
+                        .setNegativeButton("No", null)
+                        .show();
             }
         });
+    }
+
+
+    public void setBtn_del_all(){
+        // Xóa tất cả các mục từ danh sách
+        FirebaseDatabase.getInstance().getReference().child("Orders");
+        arrayList.clear();
+        // Cập nhật adapter
+        arrayAdapter.notifyDataSetChanged();
+        Toast.makeText(shopping.this, "Delete all orders successfully.", Toast.LENGTH_SHORT).show();
     }
 }

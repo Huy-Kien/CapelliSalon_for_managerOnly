@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="image_view_id" type="id">@+id/image_view_id</item>
+    <item name="text_view_1_id" type="id">@+id/text_view_1_id</item>
+    <item name="lv_shopping" type="id">@+id/lv_shopping</item>
+    <item name="btn_del_sel_shopping" type="id">@+id/btn_del_sel_shopping</item>
+    <item name="btn_del_all_shopping" type="id">@+id/btn_del_all_shopping</item>
+</resources>

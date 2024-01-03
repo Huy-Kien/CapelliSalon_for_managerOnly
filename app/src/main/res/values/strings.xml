@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CapelliSalon_app_manager</string>
+    <string name="client_have_made_shoppings">client_have_made_shoppings</string>
+    <string name="click_to_view_details">click_to_view_details</string>
+    <string name="delete_selections">delete_selections</string>
+    <string name="delete_all">delete_all</string>
 </resources>

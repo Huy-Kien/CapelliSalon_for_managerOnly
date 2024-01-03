@@ -1,6 +1,8 @@
 
 package com.example.capellisalon_app_manager;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -158,31 +160,49 @@ public class booking extends AppCompatActivity {
                     TextView textView = view.findViewById(R.id.textView); // R.id.textView là id của TextView trong layout của hàng ListView
                     // Lấy giá trị của TextView
                     String text = textView.getText().toString();
-                    for(DataSnapshot snapshot_user_level : dataSnapshot_for_button_del1.getChildren()) {
-                        // Personal Information
-                        String clientmail = snapshot_user_level.child("Personal Information").child("email").getValue(String.class);
-                        String clientName = snapshot_user_level.child("Personal Information").child("name").getValue(String.class);
+                    int finalI = i;
+                    new AlertDialog.Builder(booking.this)
+                            .setMessage("Are you sure you want to delete this schedule?")
+                            .setCancelable(false)
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
 
-                        // InfoBooking
-                        for(DataSnapshot snapshot_booking_level : snapshot_user_level.child("InfoBooking").getChildren()) {
-                            String locationName = snapshot_booking_level.child("locationName").getValue(String.class);
-                            String time = snapshot_booking_level.child("time").getValue(String.class);
-                            String staffName = snapshot_booking_level.child("staffName").getValue(String.class);
-                            String phone = snapshot_booking_level.child("phone").getValue(String.class);
-                            String bookingAddress = snapshot_booking_level.child("address").getValue(String.class);
+                                            for (DataSnapshot snapshot_user_level : dataSnapshot_for_button_del1.getChildren()) {
+                                                // Personal Information
+                                                String clientmail = snapshot_user_level.child("Personal Information").child("email").getValue(String.class);
+                                                String clientName = snapshot_user_level.child("Personal Information").child("name").getValue(String.class);
+                                                String dob = snapshot_user_level.child("Personal Information").child("dob").getValue(String.class);
+                                                String mobile = snapshot_user_level.child("Personal Information").child("mobile").getValue(String.class);
+                                                String address = snapshot_user_level.child("Personal Information").child("address").getValue(String.class);
 
-                            String value = "Email: " + clientmail + " || Name: " + clientName + " || Location Name: " + locationName + " || Time: " + time + " || Staff Name: " + staffName + " || Phone: " + phone + " || Booking Address: " + bookingAddress;
+                                                // InfoBooking
+                                                String locationName = snapshot_user_level.child("InfoBooking").child("locationName").getValue(String.class);
+                                                String time = snapshot_user_level.child("InfoBooking").child("time").getValue(String.class);
+                                                String staffName = snapshot_user_level.child("InfoBooking").child("staffName").getValue(String.class);
+                                                String phone = snapshot_user_level.child("InfoBooking").child("phone").getValue(String.class);
+                                                String bookingAddress = snapshot_user_level.child("InfoBooking").child("address").getValue(String.class);
 
-                            if(text.equals(value)){
-                                FirebaseDatabase.getInstance().getReference().child("userID").child(snapshot_user_level.getKey()).child("InfoBooking").child(snapshot_booking_level.getKey()).removeValue();
-                            }
-                        }
-                    }
-                    // Xóa item tương ứng từ danh sách
-                    arrayList1.remove(i);
-                    // Cập nhật adapter
-                    arrayAdapter1.notifyDataSetChanged();
-                    Toast.makeText(booking.this, "Selected order was deleted successfully.", Toast.LENGTH_SHORT).show();
+                                                String value = "Email: " + clientmail + " || Name: " + clientName + " || DOB: " + dob + " || Mobile: " + mobile + " || Address: " + address
+                                                        + " || Location Name: " + locationName + " || Time: " + time + " || Staff Name: " + staffName + " || Phone: " + phone + " || Booking Address: " + bookingAddress;
+//                                                    Log.w("Firebasevalue", value  );
+//                                                    Log.w("Firebasetext", text  );
+                                                    if (text.equals(value)) {
+                                                        FirebaseDatabase.getInstance().getReference().child("userID").child(snapshot_user_level.getKey()).child("InfoBooking").removeValue();
+//                                                        Toast.makeText(booking.this, "deleted", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                }
+                                            // Xóa item tương ứng từ danh sách
+                                            arrayList1.remove(finalI);
+                                            // Cập nhật adapter
+                                            arrayAdapter1.notifyDataSetChanged();
+                                            Toast.makeText(booking.this, "Selected schedule was deleted successfully.", Toast.LENGTH_SHORT).show();
+
+                                        }
+                                    })
+                                    .setNegativeButton("No", null)
+                                            .show();
+
                 }
             }
         }
@@ -193,13 +213,25 @@ public class booking extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             // Xóa tất cả các mục từ danh sách
-            for(DataSnapshot snapshot_user_level : dataSnapshot_for_button_del1.getChildren()) {
-                FirebaseDatabase.getInstance().getReference().child("userID").child(snapshot_user_level.getKey()).child("InfoBooking").removeValue();
-            arrayList1.clear();
-            // Cập nhật adapter
-            arrayAdapter1.notifyDataSetChanged();
-            Toast.makeText(booking.this, "Delete all orders successfully.", Toast.LENGTH_SHORT).show();
-        }
+            new AlertDialog.Builder(booking.this)
+                    .setMessage("Are you sure you want to delete ALL schedules?")
+                    .setCancelable(false)
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            for (DataSnapshot snapshot_user_level : dataSnapshot_for_button_del1.getChildren()) {
+                                FirebaseDatabase.getInstance().getReference().child("userID").child(snapshot_user_level.getKey()).child("InfoBooking").removeValue();
+                                arrayList1.clear();
+                                // Cập nhật adapter
+                                arrayAdapter1.notifyDataSetChanged();
+                                Toast.makeText(booking.this, "Delete all schedules successfully.", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    })
+                    .setNegativeButton("No", null)
+                    .show();
+
+
     }
 
    });
