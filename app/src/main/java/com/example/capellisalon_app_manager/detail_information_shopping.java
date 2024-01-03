@@ -1,5 +1,6 @@
 package com.example.capellisalon_app_manager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,19 +21,31 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class detail_information_shopping extends AppCompatActivity {
     private ListView listView ;
     private ArrayAdapter<String> arrayAdapter;
     private ArrayList<String> arrayList;
+    private HashMap<String, String> hashMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shopping);
+
+        Intent intent = getIntent();
         listView = findViewById(R.id.lv_shopping);
         arrayList = new ArrayList<String>();
-        arrayAdapter = new ArrayAdapter<String>(this, R.layout.list_item, R.id.textView, arrayList) {
+        hashMap = new HashMap<>();
+
+        hashMap = (HashMap<String, String>) intent.getSerializableExtra("product_info");
+        for (String value : hashMap.values()) {
+            arrayList.add(value);
+        }
+
+        arrayAdapter = new ArrayAdapter<String>(this, R.layout.simple_list_item_1, arrayList) {
             @NonNull
             @Override
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -41,29 +55,14 @@ public class detail_information_shopping extends AppCompatActivity {
             }
         };
         listView.setAdapter(arrayAdapter);
-        DatabaseReference userShoppingRef = FirebaseDatabase.getInstance().getReference().child("Orders").child("5cQ62L3VHsgaiMTadSoRufikfhD3").child("7FIY6NFITT");
-        userShoppingRef.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    Log.d("Firebase", "DataSnapshot exists: " + dataSnapshot.getValue().toString());
-                    for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        String value = snapshot.getValue(String.class).toString();
-                        arrayList.add(value);
-                        Log.d("Firebase", "onDataChange: "+ value);
-                    }
-                    arrayAdapter.notifyDataSetChanged();
-                } else {
-                    Log.w("Firebase", "No data found at this path");
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.e("Firebase", "onCancelled called: " + databaseError.getMessage());
-            }
-        });
-
-
+        arrayAdapter.notifyDataSetChanged();
+    }
+    @Override
+    public void onBackPressed() {
+        // Thực hiện xử lý khi nút "Back" được nhấn
+        // Ví dụ: Đóng Activity hiện tại
+        super.onBackPressed();
+        Toast.makeText(this, "Backpressed", Toast.LENGTH_SHORT).show();
+        finish();
     }
 }
