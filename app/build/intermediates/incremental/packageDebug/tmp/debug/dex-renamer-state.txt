@@ -1,8 +1,8 @@
-#Wed Jan 03 19:59:13 NOVT 2024
-base.0=C\:\\Users\\Kien vip\\AndroidStudioProjects\\Capesalon-manager-kien-huy\\CapelliSalon_for_managerOnly\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\Kien vip\\AndroidStudioProjects\\Capesalon-manager-kien-huy\\CapelliSalon_for_managerOnly\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\Kien vip\\AndroidStudioProjects\\Capesalon-manager-kien-huy\\CapelliSalon_for_managerOnly\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
-base.3=C\:\\Users\\Kien vip\\AndroidStudioProjects\\Capesalon-manager-kien-huy\\CapelliSalon_for_managerOnly\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Wed Jan 03 21:17:38 ICT 2024
+base.0=C\:\\Users\\ASUS\\OneDrive_UIT\\Doc\\androidStudioProject\\CapelliSalon_app_manager\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\ASUS\\OneDrive_UIT\\Doc\\androidStudioProject\\CapelliSalon_app_manager\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\ASUS\\OneDrive_UIT\\Doc\\androidStudioProject\\CapelliSalon_app_manager\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.3=C\:\\Users\\ASUS\\OneDrive_UIT\\Doc\\androidStudioProject\\CapelliSalon_app_manager\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=1/classes.dex

@@ -41,9 +41,16 @@ public class detail_information_booking extends AppCompatActivity {
         arrayList = new ArrayList<String>();
         hashMap = new HashMap<>();
 
-        hashMap = (HashMap<String, String>) intent.getSerializableExtra("booking_info");
-        for (String value : hashMap.values()) {
-            arrayList.add(value);
+        if (intent.hasExtra("booking_info")) {
+            // Lấy HashMap từ intent
+            hashMap = (HashMap<String, String>) intent.getSerializableExtra("booking_info");
+
+            // Kiểm tra xem hashMap có tồn tại không trước khi sử dụng
+            if (hashMap != null) {
+                for (String value : hashMap.values()) {
+                    arrayList.add(value);
+                }
+            }
         }
 
         arrayAdapter = new ArrayAdapter<String>(this, R.layout.simple_list_item_1, arrayList) {

@@ -4,7 +4,7 @@
             "outputFile": "com.example.capellisalon_app_manager.app-mergeDebugResources-34:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Kien vip\\.gradle\\caches\\transforms-3\\4ef38977c2e5999f75059a452f3f5df9\\transformed\\core-1.9.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-3\\4ef38977c2e5999f75059a452f3f5df9\\transformed\\core-1.9.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Kien vip\\.gradle\\caches\\transforms-3\\e3f6bfab50c8163db78f3c6ec02c64e8\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-3\\e3f6bfab50c8163db78f3c6ec02c64e8\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

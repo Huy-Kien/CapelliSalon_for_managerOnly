@@ -70,26 +70,30 @@ public class booking extends AppCompatActivity {
                     // Personal Information
                     String clientmail = snapshot_user_level.child("Personal Information").child("email").getValue(String.class);
                     String clientName = snapshot_user_level.child("Personal Information").child("name").getValue(String.class);
+                    String dob = snapshot_user_level.child("Personal Information").child("dob").getValue(String.class);
+                    String mobile = snapshot_user_level.child("Personal Information").child("mobile").getValue(String.class);
+                    String address = snapshot_user_level.child("Personal Information").child("address").getValue(String.class);
 
                     // InfoBooking
-                    for (DataSnapshot snapshot_booking_level : snapshot_user_level.child("InfoBooking").getChildren()) {
-                        String locationName = snapshot_booking_level.child("locationName").getValue(String.class);
-                        String time = snapshot_booking_level.child("time").getValue(String.class);
-                        String staffName = snapshot_booking_level.child("staffName").getValue(String.class);
-                        String phone = snapshot_booking_level.child("phone").getValue(String.class);
-                        String bookingAddress = snapshot_booking_level.child("address").getValue(String.class);
+                    String locationName = snapshot_user_level.child("InfoBooking").child("locationName").getValue(String.class);
+                    String time = snapshot_user_level.child("InfoBooking").child("time").getValue(String.class);
+                    String staffName = snapshot_user_level.child("InfoBooking").child("staffName").getValue(String.class);
+                    String phone = snapshot_user_level.child("InfoBooking").child("phone").getValue(String.class);
+                    String bookingAddress = snapshot_user_level.child("InfoBooking").child("address").getValue(String.class);
 
-                        String value_onItem = "Email: " + clientmail + " || Name: " + clientName + " || Location Name: " + locationName + " || Time: " + time + " || Staff Name: " + staffName + " || Phone: " + phone + " || Booking Address: " + bookingAddress;
+                    String value_onItem = "Email: " + clientmail + " || Name: " + clientName + " || DOB: " + dob + " || Mobile: " + mobile + " || Address: " + address
+                            + " || Location Name: " + locationName + " || Time: " + time + " || Staff Name: " + staffName + " || Phone: " + phone + " || Booking Address: " + bookingAddress;
 
-                        if (selectedItem.equals(value_onItem)) {
+                    if (selectedItem.equals(value_onItem)) {
                             HashMap<String, String> hashmap = new HashMap<>();
-                            for (DataSnapshot child : snapshot_booking_level.getChildren()) {
+                            for (DataSnapshot child : snapshot_user_level.child("InfoBooking").getChildren()) {
                                 hashmap.put(child.getKey(), child.getValue(String.class));
                             }
                             intent.putExtra("booking_info", hashmap);
+                            Toast.makeText(booking.this, "Query successfully", Toast.LENGTH_SHORT).show();
                         }
                     }
-                }
+
                 startActivity(intent);
                 Toast.makeText(booking.this, "client: " + selectedItem, Toast.LENGTH_SHORT).show();
             }
@@ -112,25 +116,24 @@ public class booking extends AppCompatActivity {
                         String address = snapshot_user_level.child("Personal Information").child("address").getValue(String.class);
 
                         // InfoBooking
-                        for (DataSnapshot snapshot_booking_level : snapshot_user_level.child("InfoBooking").getChildren()) {
-                            String locationName = snapshot_booking_level.child("locationName").getValue(String.class);
-                            String time = snapshot_booking_level.child("time").getValue(String.class);
-                            String staffName = snapshot_booking_level.child("staffName").getValue(String.class);
-                            String phone = snapshot_booking_level.child("phone").getValue(String.class);
-                            String bookingAddress = snapshot_booking_level.child("address").getValue(String.class);
+                        String locationName = snapshot_user_level.child("InfoBooking").child("locationName").getValue(String.class);
+                        String time = snapshot_user_level.child("InfoBooking").child("time").getValue(String.class);
+                        String staffName = snapshot_user_level.child("InfoBooking").child("staffName").getValue(String.class);
+                        String phone = snapshot_user_level.child("InfoBooking").child("phone").getValue(String.class);
+                        String bookingAddress = snapshot_user_level.child("InfoBooking").child("address").getValue(String.class);
 
-                            String value = "Email: " + clientmail + " || Name: " + clientName + " || DOB: " + dob + " || Mobile: " + mobile + " || Address: " + address
-                                    + " || Location Name: " + locationName + " || Time: " + time + " || Staff Name: " + staffName + " || Phone: " + phone + " || Booking Address: " + bookingAddress;
-                            arrayList1.add(value);
+                        String value = "Email: " + clientmail + " || Name: " + clientName + " || DOB: " + dob + " || Mobile: " + mobile + " || Address: " + address
+                                + " || Location Name: " + locationName + " || Time: " + time + " || Staff Name: " + staffName + " || Phone: " + phone + " || Booking Address: " + bookingAddress;
+                        arrayList1.add(value);
 
-                            booking_info = new HashMap<String, String>();
-                            booking_info = (HashMap<String, String>) snapshot_booking_level.getValue(genericTypeIndicator);
+                        booking_info = new HashMap<String, String>();
+                        booking_info = (HashMap<String, String>) snapshot_user_level.child("InfoBooking").getValue(genericTypeIndicator);
 
-                            bookingList.add(booking_info);
-                        }
+                        bookingList.add(booking_info);
                     }
                     arrayAdapter1.notifyDataSetChanged();
-                } else {
+                }
+                    else {
                     Log.w("Firebase", "No data found at this path");
                 }
     }
