@@ -1,11 +1,17 @@
 package com.example.capellisalon_app_manager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -17,48 +23,47 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+
 
 public class detail_information_booking extends AppCompatActivity {
-    ListView dtbooking;
-    private ArrayAdapter<String> adapter;
-    private ArrayList<String> dtbookingList;
+    private ListView listView ;
+    private ArrayAdapter<String> arrayAdapter;
+    private ArrayList<String> arrayList;
+    private HashMap<String, String> hashMap;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_infomation_booking);
+        Intent intent = getIntent();
+        listView = findViewById(R.id.lv_detail_booking);
+        arrayList = new ArrayList<String>();
+        hashMap = new HashMap<>();
 
-        dtbooking = findViewById(R.id.lv_detail_booking);
-        dtbookingList = new ArrayList<>(); // Sửa ở đây
+        hashMap = (HashMap<String, String>) intent.getSerializableExtra("booking_info");
+        for (String value : hashMap.values()) {
+            arrayList.add(value);
+        }
 
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dtbookingList);
-        dtbooking.setAdapter(adapter);
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        String userId = getIntent().getStringExtra("userId");
-
-        DatabaseReference userBookingRef = FirebaseDatabase.getInstance().getReference().child("userID").child(userId).child("InfoBooking");
-
-        userBookingRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        arrayAdapter = new ArrayAdapter<String>(this, R.layout.simple_list_item_1, arrayList) {
+            @NonNull
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    Log.d("Firebase", "DataSnapshot exists: " + dataSnapshot.getValue());
-                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        Object data = snapshot.getValue();
-                        if (data != null) {
-                            String convertedData = data.toString();
-                            dtbookingList.add(convertedData);
-                        }
-                    }
-                    adapter.notifyDataSetChanged();
-                } else {
-                    Log.d("Firebase", "No data found at this path");
-                }
+            public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+                View view = super.getView(position, convertView, parent);
+                CheckBox checkBox = view.findViewById(R.id.checkBox);
+                return view;
             }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.e("Firebase", "onCancelled called: " + databaseError.getMessage());
-            }
-        });
+        };
+        listView.setAdapter(arrayAdapter);
+        arrayAdapter.notifyDataSetChanged();
+    }
+    @Override
+    public void onBackPressed() {
+        // Thực hiện xử lý khi nút "Back" được nhấn
+        // Ví dụ: Đóng Activity hiện tại
+        super.onBackPressed();
+        Toast.makeText(this, "Backpressed", Toast.LENGTH_SHORT).show();
+        finish();
     }
 }

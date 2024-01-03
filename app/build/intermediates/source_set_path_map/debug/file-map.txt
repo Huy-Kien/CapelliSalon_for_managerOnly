@@ -1,39 +1,39 @@
-com.example.capellisalon_app_manager.app-activity-1.8.0-0 C:\Users\ASUS\.gradle\caches\transforms-3\038e721058076c1a6900b224b2212dc2\transformed\activity-1.8.0\res
-com.example.capellisalon_app_manager.app-core-runtime-2.2.0-1 C:\Users\ASUS\.gradle\caches\transforms-3\1533edd473df621b672eca26f04e9c49\transformed\core-runtime-2.2.0\res
-com.example.capellisalon_app_manager.app-lifecycle-livedata-2.6.1-2 C:\Users\ASUS\.gradle\caches\transforms-3\23111cf00938e66cf02143a2756ad3a8\transformed\lifecycle-livedata-2.6.1\res
-com.example.capellisalon_app_manager.app-material-1.11.0-3 C:\Users\ASUS\.gradle\caches\transforms-3\269d2ce01f50ef0a660da19c5a3b461b\transformed\material-1.11.0\res
-com.example.capellisalon_app_manager.app-firebase-common-20.4.2-4 C:\Users\ASUS\.gradle\caches\transforms-3\2710805c419e8cbaf939421bbbc993aa\transformed\firebase-common-20.4.2\res
-com.example.capellisalon_app_manager.app-fragment-1.3.6-5 C:\Users\ASUS\.gradle\caches\transforms-3\2be4a7f74b2f8e91f299b3bd3de5b259\transformed\fragment-1.3.6\res
-com.example.capellisalon_app_manager.app-lifecycle-runtime-2.6.1-6 C:\Users\ASUS\.gradle\caches\transforms-3\2c2201f7d8fb3d0af814dd503284254f\transformed\lifecycle-runtime-2.6.1\res
-com.example.capellisalon_app_manager.app-core-ktx-1.9.0-7 C:\Users\ASUS\.gradle\caches\transforms-3\3e13c3ab8c88b33579cd1162e0ad9b1b\transformed\core-ktx-1.9.0\res
-com.example.capellisalon_app_manager.app-core-1.9.0-8 C:\Users\ASUS\.gradle\caches\transforms-3\4ef38977c2e5999f75059a452f3f5df9\transformed\core-1.9.0\res
-com.example.capellisalon_app_manager.app-startup-runtime-1.1.1-9 C:\Users\ASUS\.gradle\caches\transforms-3\5369f1195e444a3296e4f1f3a03a3c89\transformed\startup-runtime-1.1.1\res
-com.example.capellisalon_app_manager.app-lifecycle-livedata-core-2.6.1-10 C:\Users\ASUS\.gradle\caches\transforms-3\5b2c0ee4b5e06841b08c58ee145fd621\transformed\lifecycle-livedata-core-2.6.1\res
-com.example.capellisalon_app_manager.app-browser-1.4.0-11 C:\Users\ASUS\.gradle\caches\transforms-3\63ea340fb1d8baf6ba4f1e83db7be173\transformed\browser-1.4.0\res
-com.example.capellisalon_app_manager.app-transition-1.2.0-12 C:\Users\ASUS\.gradle\caches\transforms-3\79a4db5007c180fbe70e70bf8d543bf4\transformed\transition-1.2.0\res
-com.example.capellisalon_app_manager.app-constraintlayout-2.1.4-13 C:\Users\ASUS\.gradle\caches\transforms-3\7c11b619ed0b1cc8ca2186c050650596\transformed\constraintlayout-2.1.4\res
-com.example.capellisalon_app_manager.app-lifecycle-viewmodel-2.6.1-14 C:\Users\ASUS\.gradle\caches\transforms-3\879ffcd9b929e9645956bb6a1ea397c2\transformed\lifecycle-viewmodel-2.6.1\res
-com.example.capellisalon_app_manager.app-viewpager2-1.0.0-15 C:\Users\ASUS\.gradle\caches\transforms-3\9f67c68f7bea1d3fd1a25600b0e4aaed\transformed\viewpager2-1.0.0\res
-com.example.capellisalon_app_manager.app-lifecycle-viewmodel-savedstate-2.6.1-16 C:\Users\ASUS\.gradle\caches\transforms-3\a066d5ae3efa603bda9ea958258168c4\transformed\lifecycle-viewmodel-savedstate-2.6.1\res
-com.example.capellisalon_app_manager.app-emoji2-1.2.0-17 C:\Users\ASUS\.gradle\caches\transforms-3\b1f6aa6794e70fa39718940c64fe0fc9\transformed\emoji2-1.2.0\res
-com.example.capellisalon_app_manager.app-profileinstaller-1.3.0-18 C:\Users\ASUS\.gradle\caches\transforms-3\b6f6aec92ea4832bf8760cd07275e407\transformed\profileinstaller-1.3.0\res
-com.example.capellisalon_app_manager.app-savedstate-1.2.1-19 C:\Users\ASUS\.gradle\caches\transforms-3\b90226339d240019d48739cc6abddf78\transformed\savedstate-1.2.1\res
-com.example.capellisalon_app_manager.app-play-services-base-18.1.0-20 C:\Users\ASUS\.gradle\caches\transforms-3\bc1f30bcb410468b045fedb58b052fea\transformed\play-services-base-18.1.0\res
-com.example.capellisalon_app_manager.app-coordinatorlayout-1.1.0-21 C:\Users\ASUS\.gradle\caches\transforms-3\bda2f3c1b1ab67e56e56226fe4b45a01\transformed\coordinatorlayout-1.1.0\res
-com.example.capellisalon_app_manager.app-lifecycle-process-2.6.1-22 C:\Users\ASUS\.gradle\caches\transforms-3\c6836b87af8dc1b4fd7ba54a39a14198\transformed\lifecycle-process-2.6.1\res
-com.example.capellisalon_app_manager.app-appcompat-resources-1.6.1-23 C:\Users\ASUS\.gradle\caches\transforms-3\cd253dbd22b30a7a6e2669f74b436c71\transformed\appcompat-resources-1.6.1\res
-com.example.capellisalon_app_manager.app-appcompat-1.6.1-24 C:\Users\ASUS\.gradle\caches\transforms-3\e3f6bfab50c8163db78f3c6ec02c64e8\transformed\appcompat-1.6.1\res
-com.example.capellisalon_app_manager.app-emoji2-views-helper-1.2.0-25 C:\Users\ASUS\.gradle\caches\transforms-3\e55f7ef68e380b8426fb820738262e27\transformed\emoji2-views-helper-1.2.0\res
-com.example.capellisalon_app_manager.app-drawerlayout-1.1.1-26 C:\Users\ASUS\.gradle\caches\transforms-3\e98923e73924efdb4a8276df53193584\transformed\drawerlayout-1.1.1\res
-com.example.capellisalon_app_manager.app-play-services-basement-18.1.0-27 C:\Users\ASUS\.gradle\caches\transforms-3\e992bcd92a6855b58da6c90f9b92b07e\transformed\play-services-basement-18.1.0\res
-com.example.capellisalon_app_manager.app-recyclerview-1.1.0-28 C:\Users\ASUS\.gradle\caches\transforms-3\f7c582cdc9d39c30fba0c590b05b8249\transformed\recyclerview-1.1.0\res
-com.example.capellisalon_app_manager.app-cardview-1.0.0-29 C:\Users\ASUS\.gradle\caches\transforms-3\f894df28e013aa5579e6f71be090dec5\transformed\cardview-1.0.0\res
-com.example.capellisalon_app_manager.app-annotation-experimental-1.3.0-30 C:\Users\ASUS\.gradle\caches\transforms-3\fb3749072db03c0afe1216cff719d970\transformed\annotation-experimental-1.3.0\res
-com.example.capellisalon_app_manager.app-pngs-31 C:\Users\ASUS\OneDrive_UIT\Doc\androidStudioProject\CapelliSalon_app_manager\app\build\generated\res\pngs\debug
-com.example.capellisalon_app_manager.app-res-32 C:\Users\ASUS\OneDrive_UIT\Doc\androidStudioProject\CapelliSalon_app_manager\app\build\generated\res\processDebugGoogleServices
-com.example.capellisalon_app_manager.app-resValues-33 C:\Users\ASUS\OneDrive_UIT\Doc\androidStudioProject\CapelliSalon_app_manager\app\build\generated\res\resValues\debug
-com.example.capellisalon_app_manager.app-packageDebugResources-34 C:\Users\ASUS\OneDrive_UIT\Doc\androidStudioProject\CapelliSalon_app_manager\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.capellisalon_app_manager.app-packageDebugResources-35 C:\Users\ASUS\OneDrive_UIT\Doc\androidStudioProject\CapelliSalon_app_manager\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.capellisalon_app_manager.app-merged_res-36 C:\Users\ASUS\OneDrive_UIT\Doc\androidStudioProject\CapelliSalon_app_manager\app\build\intermediates\merged_res\debug
-com.example.capellisalon_app_manager.app-debug-37 C:\Users\ASUS\OneDrive_UIT\Doc\androidStudioProject\CapelliSalon_app_manager\app\src\debug\res
-com.example.capellisalon_app_manager.app-main-38 C:\Users\ASUS\OneDrive_UIT\Doc\androidStudioProject\CapelliSalon_app_manager\app\src\main\res
+com.example.capellisalon_app_manager.app-activity-1.8.0-0 C:\Users\Kien vip\.gradle\caches\transforms-3\038e721058076c1a6900b224b2212dc2\transformed\activity-1.8.0\res
+com.example.capellisalon_app_manager.app-core-runtime-2.2.0-1 C:\Users\Kien vip\.gradle\caches\transforms-3\1533edd473df621b672eca26f04e9c49\transformed\core-runtime-2.2.0\res
+com.example.capellisalon_app_manager.app-lifecycle-livedata-2.6.1-2 C:\Users\Kien vip\.gradle\caches\transforms-3\23111cf00938e66cf02143a2756ad3a8\transformed\lifecycle-livedata-2.6.1\res
+com.example.capellisalon_app_manager.app-material-1.11.0-3 C:\Users\Kien vip\.gradle\caches\transforms-3\269d2ce01f50ef0a660da19c5a3b461b\transformed\material-1.11.0\res
+com.example.capellisalon_app_manager.app-firebase-common-20.4.2-4 C:\Users\Kien vip\.gradle\caches\transforms-3\2710805c419e8cbaf939421bbbc993aa\transformed\firebase-common-20.4.2\res
+com.example.capellisalon_app_manager.app-fragment-1.3.6-5 C:\Users\Kien vip\.gradle\caches\transforms-3\2be4a7f74b2f8e91f299b3bd3de5b259\transformed\fragment-1.3.6\res
+com.example.capellisalon_app_manager.app-lifecycle-runtime-2.6.1-6 C:\Users\Kien vip\.gradle\caches\transforms-3\2c2201f7d8fb3d0af814dd503284254f\transformed\lifecycle-runtime-2.6.1\res
+com.example.capellisalon_app_manager.app-core-ktx-1.9.0-7 C:\Users\Kien vip\.gradle\caches\transforms-3\3e13c3ab8c88b33579cd1162e0ad9b1b\transformed\core-ktx-1.9.0\res
+com.example.capellisalon_app_manager.app-core-1.9.0-8 C:\Users\Kien vip\.gradle\caches\transforms-3\4ef38977c2e5999f75059a452f3f5df9\transformed\core-1.9.0\res
+com.example.capellisalon_app_manager.app-startup-runtime-1.1.1-9 C:\Users\Kien vip\.gradle\caches\transforms-3\5369f1195e444a3296e4f1f3a03a3c89\transformed\startup-runtime-1.1.1\res
+com.example.capellisalon_app_manager.app-lifecycle-livedata-core-2.6.1-10 C:\Users\Kien vip\.gradle\caches\transforms-3\5b2c0ee4b5e06841b08c58ee145fd621\transformed\lifecycle-livedata-core-2.6.1\res
+com.example.capellisalon_app_manager.app-browser-1.4.0-11 C:\Users\Kien vip\.gradle\caches\transforms-3\63ea340fb1d8baf6ba4f1e83db7be173\transformed\browser-1.4.0\res
+com.example.capellisalon_app_manager.app-transition-1.2.0-12 C:\Users\Kien vip\.gradle\caches\transforms-3\79a4db5007c180fbe70e70bf8d543bf4\transformed\transition-1.2.0\res
+com.example.capellisalon_app_manager.app-constraintlayout-2.1.4-13 C:\Users\Kien vip\.gradle\caches\transforms-3\7c11b619ed0b1cc8ca2186c050650596\transformed\constraintlayout-2.1.4\res
+com.example.capellisalon_app_manager.app-lifecycle-viewmodel-2.6.1-14 C:\Users\Kien vip\.gradle\caches\transforms-3\879ffcd9b929e9645956bb6a1ea397c2\transformed\lifecycle-viewmodel-2.6.1\res
+com.example.capellisalon_app_manager.app-viewpager2-1.0.0-15 C:\Users\Kien vip\.gradle\caches\transforms-3\9f67c68f7bea1d3fd1a25600b0e4aaed\transformed\viewpager2-1.0.0\res
+com.example.capellisalon_app_manager.app-lifecycle-viewmodel-savedstate-2.6.1-16 C:\Users\Kien vip\.gradle\caches\transforms-3\a066d5ae3efa603bda9ea958258168c4\transformed\lifecycle-viewmodel-savedstate-2.6.1\res
+com.example.capellisalon_app_manager.app-emoji2-1.2.0-17 C:\Users\Kien vip\.gradle\caches\transforms-3\b1f6aa6794e70fa39718940c64fe0fc9\transformed\emoji2-1.2.0\res
+com.example.capellisalon_app_manager.app-profileinstaller-1.3.0-18 C:\Users\Kien vip\.gradle\caches\transforms-3\b6f6aec92ea4832bf8760cd07275e407\transformed\profileinstaller-1.3.0\res
+com.example.capellisalon_app_manager.app-savedstate-1.2.1-19 C:\Users\Kien vip\.gradle\caches\transforms-3\b90226339d240019d48739cc6abddf78\transformed\savedstate-1.2.1\res
+com.example.capellisalon_app_manager.app-play-services-base-18.1.0-20 C:\Users\Kien vip\.gradle\caches\transforms-3\bc1f30bcb410468b045fedb58b052fea\transformed\play-services-base-18.1.0\res
+com.example.capellisalon_app_manager.app-coordinatorlayout-1.1.0-21 C:\Users\Kien vip\.gradle\caches\transforms-3\bda2f3c1b1ab67e56e56226fe4b45a01\transformed\coordinatorlayout-1.1.0\res
+com.example.capellisalon_app_manager.app-lifecycle-process-2.6.1-22 C:\Users\Kien vip\.gradle\caches\transforms-3\c6836b87af8dc1b4fd7ba54a39a14198\transformed\lifecycle-process-2.6.1\res
+com.example.capellisalon_app_manager.app-appcompat-resources-1.6.1-23 C:\Users\Kien vip\.gradle\caches\transforms-3\cd253dbd22b30a7a6e2669f74b436c71\transformed\appcompat-resources-1.6.1\res
+com.example.capellisalon_app_manager.app-appcompat-1.6.1-24 C:\Users\Kien vip\.gradle\caches\transforms-3\e3f6bfab50c8163db78f3c6ec02c64e8\transformed\appcompat-1.6.1\res
+com.example.capellisalon_app_manager.app-emoji2-views-helper-1.2.0-25 C:\Users\Kien vip\.gradle\caches\transforms-3\e55f7ef68e380b8426fb820738262e27\transformed\emoji2-views-helper-1.2.0\res
+com.example.capellisalon_app_manager.app-drawerlayout-1.1.1-26 C:\Users\Kien vip\.gradle\caches\transforms-3\e98923e73924efdb4a8276df53193584\transformed\drawerlayout-1.1.1\res
+com.example.capellisalon_app_manager.app-play-services-basement-18.1.0-27 C:\Users\Kien vip\.gradle\caches\transforms-3\e992bcd92a6855b58da6c90f9b92b07e\transformed\play-services-basement-18.1.0\res
+com.example.capellisalon_app_manager.app-recyclerview-1.1.0-28 C:\Users\Kien vip\.gradle\caches\transforms-3\f7c582cdc9d39c30fba0c590b05b8249\transformed\recyclerview-1.1.0\res
+com.example.capellisalon_app_manager.app-cardview-1.0.0-29 C:\Users\Kien vip\.gradle\caches\transforms-3\f894df28e013aa5579e6f71be090dec5\transformed\cardview-1.0.0\res
+com.example.capellisalon_app_manager.app-annotation-experimental-1.3.0-30 C:\Users\Kien vip\.gradle\caches\transforms-3\fb3749072db03c0afe1216cff719d970\transformed\annotation-experimental-1.3.0\res
+com.example.capellisalon_app_manager.app-pngs-31 C:\Users\Kien vip\AndroidStudioProjects\Capesalon-manager-kien-huy\CapelliSalon_for_managerOnly\app\build\generated\res\pngs\debug
+com.example.capellisalon_app_manager.app-res-32 C:\Users\Kien vip\AndroidStudioProjects\Capesalon-manager-kien-huy\CapelliSalon_for_managerOnly\app\build\generated\res\processDebugGoogleServices
+com.example.capellisalon_app_manager.app-resValues-33 C:\Users\Kien vip\AndroidStudioProjects\Capesalon-manager-kien-huy\CapelliSalon_for_managerOnly\app\build\generated\res\resValues\debug
+com.example.capellisalon_app_manager.app-packageDebugResources-34 C:\Users\Kien vip\AndroidStudioProjects\Capesalon-manager-kien-huy\CapelliSalon_for_managerOnly\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.capellisalon_app_manager.app-packageDebugResources-35 C:\Users\Kien vip\AndroidStudioProjects\Capesalon-manager-kien-huy\CapelliSalon_for_managerOnly\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.capellisalon_app_manager.app-merged_res-36 C:\Users\Kien vip\AndroidStudioProjects\Capesalon-manager-kien-huy\CapelliSalon_for_managerOnly\app\build\intermediates\merged_res\debug
+com.example.capellisalon_app_manager.app-debug-37 C:\Users\Kien vip\AndroidStudioProjects\Capesalon-manager-kien-huy\CapelliSalon_for_managerOnly\app\src\debug\res
+com.example.capellisalon_app_manager.app-main-38 C:\Users\Kien vip\AndroidStudioProjects\Capesalon-manager-kien-huy\CapelliSalon_for_managerOnly\app\src\main\res
